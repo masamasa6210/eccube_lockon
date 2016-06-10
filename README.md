@@ -81,7 +81,7 @@ DBユーザ : eccube_db_user
 DBパスワード : password  
 
 
-## 掲示板3に関して
+## ※掲示板3に関して
 ~/Documents/eccube_techaca/www 以下に掲示板2で作成したソースコードを配置  
 > 例 : ~/Documents/eccube_techaca/www/keijiban
 
