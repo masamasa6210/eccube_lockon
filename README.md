@@ -81,6 +81,15 @@ DBユーザ : eccube_db_user
 DBパスワード : password  
 
 
+## 掲示板3に関して
+~/Documents/eccube_techaca/www 以下に掲示板2で作成したソースコードを配置  
+> 例 : ~/Documents/eccube_techaca/www/keijiban
+
+掲示板用にDBを作成し、連携    
+ブラウザで動作確認  
+> 例 : 192.168.55.10/eccube_techaca/keijiban
+
+
 ## 参考
 [VirtualBoxで64bit版OSを使うためにIntel VTを有効化する](http://d.hatena.ne.jp/torazuka/20100620/p1)  
 [Vagrantのmountエラーを解決しようとしたらvboxのリビルドがこける](http://qiita.com/wakaba260/items/b5c87b7815b710f303a0)
