@@ -47,7 +47,7 @@ $ vagrant plugin install --plugin-source https://rubygems.org/ --plugin-prerelea
 下記のパッケージをインストール  
 その後、仮想マシンを再起動
 ```
-$ ssh vagrant@192.168.55.10
+$ vagrant ssh
 パスワードの入力を求められるので、vagrant と入力
 
 [vagrant@localhost ~] $ sudo yum -y update kernel
