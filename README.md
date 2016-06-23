@@ -48,7 +48,6 @@ $ vagrant plugin install --plugin-source https://rubygems.org/ --plugin-prerelea
 その後、仮想マシンを再起動
 ```
 $ vagrant ssh
-パスワードの入力を求められるので、vagrant と入力
 
 [vagrant@localhost ~] $ sudo yum -y update kernel
 [vagrant@localhost ~] $ sudo yum -y install kernel-devel kernel-headers dkms gcc gcc-c++
