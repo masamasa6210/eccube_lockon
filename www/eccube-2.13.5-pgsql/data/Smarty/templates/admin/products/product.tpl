@@ -223,6 +223,15 @@
             </td>
         </tr>
         <!--{/if}-->
+
+        <tr>
+            <th><!--{$smarty.const.DISCOUNT_PRICE_TITLE}--></th>
+            <td>
+                <span class="attention"><!--{$arrErr.discount}--></span>
+                <input type="text" name="discount" value="<!--{$arrForm.discount|h}-->" size="6" class="box6" maxlength="<!--{$smarty.const.PERCENTAGE_LEN}-->" style="<!--{if $arrErr.price01 != ""}-->background-color: <!--{$smarty.const.ERR_COLOR}-->;<!--{/if}-->"/>%
+                <span class="attention"> (半角数字で入力)</span>
+            </td>
+        </tr>
         <tr>
             <th>在庫数<span class="attention"> *</span></th>
             <td>

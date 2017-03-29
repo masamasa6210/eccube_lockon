@@ -131,6 +131,15 @@
                 </td>
             </tr>
             <!--{/if}-->
+
+            <tr>
+                <th><!--{$smarty.const.DISCOUNT_PRICE_TITLE}--></th>
+                <td>
+                    <!--{if strlen($arrForm.discount) >= 1}--><!--{$arrForm.discount|h}--> %<!--{/if}-->
+                </td>
+            </tr>
+
+
             <tr>
                 <th>在庫数</th>
                 <td>

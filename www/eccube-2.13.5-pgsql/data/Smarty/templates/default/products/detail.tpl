@@ -127,6 +127,10 @@
                     </dd>
                 </dl>
 
+
+                <!--★項目名★-->
+                <h2><!--{$smarty.const.DISCOUNT_PRICE_TITLE}--></h2>
+
                 <!--★ポイント★-->
                 <!--{if $smarty.const.USE_POINT !== false}-->
                     <div class="point">ポイント：

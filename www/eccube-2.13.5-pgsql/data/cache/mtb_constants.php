@@ -486,3 +486,5 @@ define('PENDING_ORDER_CANCEL_TIME', 900);
 define('PENDING_ORDER_CANCEL_FLAG', true);
 /** API機能を有効にする(true:する false:しない) */
 define('API_ENABLE_FLAG', false);
+/**価格名称**/
+define('DISCOUNT_PRICE_TITLE', "会員　割引率");

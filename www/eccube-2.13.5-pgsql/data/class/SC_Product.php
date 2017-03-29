@@ -143,6 +143,7 @@ class SC_Product
             ,status
             ,del_flg
             ,update_date
+            ,discount
 __EOS__;
         $res = $objQuery->select($col, $this->alldtlSQL());
 

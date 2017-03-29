@@ -328,6 +328,10 @@ class LC_Page_Admin_Products_Product extends LC_Page_Admin_Products_Ex
             if (OPTION_PRODUCT_TAX_RULE) {
                 $objFormParam->addParam('消費税率', 'tax_rate', PERCENTAGE_LEN, 'n', array('EXIST_CHECK', 'NUM_CHECK', 'MAX_LENGTH_CHECK'));
             }
+
+            //追加
+            $objFormParam->addParam(DISCOUNT_PRICE_TITLE, 'discount', PERCENTAGE_LEN, 'n', array('NUM_CHECK', 'MAX_LENGTH_CHECK'));
+
             $objFormParam->addParam('在庫数', 'stock', AMOUNT_LEN, 'n', array('SPTAB_CHECK', 'NUM_CHECK', 'MAX_LENGTH_CHECK', 'ZERO_START'));
             $objFormParam->addParam('在庫無制限', 'stock_unlimited', INT_LEN, 'n', array('SPTAB_CHECK', 'NUM_CHECK', 'MAX_LENGTH_CHECK'));
         }
@@ -856,6 +860,7 @@ class LC_Page_Admin_Products_Product extends LC_Page_Admin_Products_Ex
                     price01,
                     price02,
                     deliv_fee,
+                    discount,
                     stock,
                     stock_unlimited,
                     sale_limit,
@@ -1156,7 +1161,7 @@ __EOF__;
         $objDb = new SC_Helper_DB_Ex();
 
         // 配列の添字を定義
-        $checkArray = array('product_class_id', 'product_id', 'product_code', 'stock', 'stock_unlimited', 'price01', 'price02', 'sale_limit', 'deliv_fee', 'point_rate', 'product_type_id', 'down_filename', 'down_realfilename');
+        $checkArray = array('product_class_id', 'product_id', 'product_code', 'stock', 'stock_unlimited', 'price01', 'price02', 'sale_limit', 'deliv_fee', 'discount', 'point_rate', 'product_type_id', 'down_filename', 'down_realfilename');
         $sqlval = SC_Utils_Ex::sfArrayIntersectKeys($arrList, $checkArray);
         $sqlval = SC_Utils_Ex::arrayDefineIndexes($sqlval, $checkArray);
 
