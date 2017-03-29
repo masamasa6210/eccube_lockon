@@ -1,7 +1,7 @@
-<?php /* Smarty version 2.6.27, created on 2017-03-24 17:05:39
+<?php /* Smarty version 2.6.27, created on 2017-03-29 18:53:16
          compiled from products/product.tpl */ ?>
 <?php require_once(SMARTY_CORE_DIR . 'core.load_plugins.php');
-smarty_core_load_plugins(array('plugins' => array(array('modifier', 'script_escape', 'products/product.tpl', 39, false),array('modifier', 'h', 'products/product.tpl', 94, false),array('modifier', 'sfGetErrorColor', 'products/product.tpl', 188, false),array('modifier', 'default', 'products/product.tpl', 249, false),array('modifier', 'function_exists', 'products/product.tpl', 363, false),array('modifier', 'sfNoImageMainList', 'products/product.tpl', 450, false),array('function', 'html_options', 'products/product.tpl', 144, false),array('function', 'html_radios', 'products/product.tpl', 154, false),array('function', 'html_checkboxes', 'products/product.tpl', 160, false),)), $this); ?>
+smarty_core_load_plugins(array('plugins' => array(array('modifier', 'script_escape', 'products/product.tpl', 39, false),array('modifier', 'h', 'products/product.tpl', 94, false),array('modifier', 'sfGetErrorColor', 'products/product.tpl', 188, false),array('modifier', 'default', 'products/product.tpl', 258, false),array('modifier', 'function_exists', 'products/product.tpl', 372, false),array('modifier', 'sfNoImageMainList', 'products/product.tpl', 459, false),array('function', 'html_options', 'products/product.tpl', 144, false),array('function', 'html_radios', 'products/product.tpl', 154, false),array('function', 'html_checkboxes', 'products/product.tpl', 160, false),)), $this); ?>
 <script type="text/javascript">
     // 表示非表示切り替え
     function lfDispSwitch(id){
@@ -268,6 +268,20 @@ smarty_core_load_plugins(array('plugins' => array(array('modifier', 'script_esca
             </td>
         </tr>
         <?php endif; ?>
+
+        <tr>
+            <th><?php echo ((is_array($_tmp=@DISCOUNT_PRICE_TITLE)) ? $this->_run_mod_handler('script_escape', true, $_tmp) : smarty_modifier_script_escape($_tmp)); ?>
+</th>
+            <td>
+                <span class="attention"><?php echo ((is_array($_tmp=$this->_tpl_vars['arrErr']['discount'])) ? $this->_run_mod_handler('script_escape', true, $_tmp) : smarty_modifier_script_escape($_tmp)); ?>
+</span>
+                <input type="text" name="discount" value="<?php echo ((is_array($_tmp=((is_array($_tmp=$this->_tpl_vars['arrForm']['discount'])) ? $this->_run_mod_handler('script_escape', true, $_tmp) : smarty_modifier_script_escape($_tmp)))) ? $this->_run_mod_handler('h', true, $_tmp) : smarty_modifier_h($_tmp)); ?>
+" size="6" class="box6" maxlength="<?php echo ((is_array($_tmp=@PERCENTAGE_LEN)) ? $this->_run_mod_handler('script_escape', true, $_tmp) : smarty_modifier_script_escape($_tmp)); ?>
+" style="<?php if (((is_array($_tmp=$this->_tpl_vars['arrErr']['price01'])) ? $this->_run_mod_handler('script_escape', true, $_tmp) : smarty_modifier_script_escape($_tmp)) != ""): ?>background-color: <?php echo ((is_array($_tmp=@ERR_COLOR)) ? $this->_run_mod_handler('script_escape', true, $_tmp) : smarty_modifier_script_escape($_tmp)); ?>
+;<?php endif; ?>"/>%
+                <span class="attention"> (半角数字で入力)</span>
+            </td>
+        </tr>
         <tr>
             <th>在庫数<span class="attention"> *</span></th>
             <td>

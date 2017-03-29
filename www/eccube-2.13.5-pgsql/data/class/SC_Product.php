@@ -656,6 +656,7 @@ __EOS__;
                 dtb_products_class.sale_limit,
                 dtb_products_class.price01,
                 dtb_products_class.price02,
+                dtb_products_class.discount,
                 dtb_products_class.deliv_fee,
                 dtb_products_class.point_rate,
                 dtb_products_class.down_filename,
