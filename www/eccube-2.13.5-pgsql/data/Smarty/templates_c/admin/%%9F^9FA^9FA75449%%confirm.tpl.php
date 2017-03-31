@@ -1,4 +1,4 @@
-<?php /* Smarty version 2.6.27, created on 2017-03-29 18:54:44
+<?php /* Smarty version 2.6.27, created on 2017-03-31 13:38:13
          compiled from products/confirm.tpl */ ?>
 <?php require_once(SMARTY_CORE_DIR . 'core.load_plugins.php');
 smarty_core_load_plugins(array('plugins' => array(array('modifier', 'script_escape', 'products/confirm.tpl', 26, false),array('modifier', 'h', 'products/confirm.tpl', 31, false),array('modifier', 'sfTrim', 'products/confirm.tpl', 64, false),array('modifier', 'default', 'products/confirm.tpl', 176, false),array('modifier', 'nl2br', 'products/confirm.tpl', 200, false),array('modifier', 'nl2br_html', 'products/confirm.tpl', 212, false),array('modifier', 'function_exists', 'products/confirm.tpl', 244, false),array('modifier', 'strlen', 'products/confirm.tpl', 291, false),array('modifier', 'sfNoImageMainList', 'products/confirm.tpl', 292, false),)), $this); ?>
@@ -169,7 +169,7 @@ $this->_sections['cnt']['last']       = ($this->_sections['cnt']['iteration'] ==
             <?php endif; ?>
 
             <tr>
-                <th><?php echo ((is_array($_tmp=@SALE_PRICE_TITLE)) ? $this->_run_mod_handler('script_escape', true, $_tmp) : smarty_modifier_script_escape($_tmp)); ?>
+                <th><?php echo ((is_array($_tmp=@DISCOUNT_PRICE_TITLE)) ? $this->_run_mod_handler('script_escape', true, $_tmp) : smarty_modifier_script_escape($_tmp)); ?>
 </th>
                 <td>
                     <?php if (strlen ( ((is_array($_tmp=$this->_tpl_vars['arrForm']['discount'])) ? $this->_run_mod_handler('script_escape', true, $_tmp) : smarty_modifier_script_escape($_tmp)) ) >= 1): ?><?php echo ((is_array($_tmp=((is_array($_tmp=$this->_tpl_vars['arrForm']['discount'])) ? $this->_run_mod_handler('script_escape', true, $_tmp) : smarty_modifier_script_escape($_tmp)))) ? $this->_run_mod_handler('h', true, $_tmp) : smarty_modifier_h($_tmp)); ?>

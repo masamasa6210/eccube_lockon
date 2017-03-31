@@ -75,7 +75,7 @@ class LC_Page_Products_List extends LC_Page_Ex
     /**
      * Page のプロセス.
      *
-     * @return void
+     * @return voidd
      */
     public function process()
     {

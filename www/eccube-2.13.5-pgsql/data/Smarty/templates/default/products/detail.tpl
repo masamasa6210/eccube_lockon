@@ -128,6 +128,17 @@
                 </dl>
 
 
+                <dl class="sale_price">
+                    <dt><!--{$smarty.const.DISCOUNT_PRICE_TITLE}-->：</dt>
+                    <dd class="price">
+                        <span id="price02_default"><!--{strip}-->
+                            <!--{$arrProduct.discount}-->
+                            <!--{/strip}--></span><span id="price02_dynamic"></span>
+                        %
+                    </dd>
+                </dl>
+
+
 
                 <!--★ポイント★-->
                 <!--{if $smarty.const.USE_POINT !== false}-->

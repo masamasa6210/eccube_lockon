@@ -143,7 +143,6 @@ class SC_Product
             ,status
             ,del_flg
             ,update_date
-            ,discount
 __EOS__;
         $res = $objQuery->select($col, $this->alldtlSQL());
 
@@ -189,6 +188,9 @@ __EOS__;
         // 税込金額を設定する
         SC_Product_Ex::setIncTaxToProducts($arrProducts);
 
+        //割引率の設定
+        SC_Product_Ex::DiscountToProducts($arrProducts);
+
         return $arrProducts;
     }
 
@@ -209,6 +211,9 @@ __EOS__;
 
         // 税込金額を設定する
         SC_Product_Ex::setIncTaxToProduct($arrProduct);
+
+        //割引価格を設定する
+        SC_Product_Ex::DiscountToProduct($arrProduct);
 
         return $arrProduct;
     }
@@ -591,6 +596,43 @@ __EOS__;
         return $arrProducts;
     }
 
+        //割引率
+    public static function DiscountToProducts(&$arrProducts) {
+
+        /* リスト取得時用 */
+        foreach ($arrProducts as &$arrProduct) {
+
+            /* 詳細取得時用のメソッドを$arrProduct毎に呼び出す */
+            SC_Product_Ex::DiscountToProduct($arrProduct);
+
+        }
+    }
+
+    public static function DiscountToProduct(&$arrProduct) {
+        /* 詳細取得時用 */
+        /* 追加したい情報を取得・生成して、$arrProductへマージする */
+        $objQuery =& SC_Query_Ex::getSingletonInstance();
+
+        // SQLのセット
+        $col = 'discount';
+        $where = 'del_flg = 0';
+        $table = 'dtb_products_class';
+        $objQuery->setOrder('discount');
+
+        // SQLの実行
+        $arrRets = $objQuery->select($col, $table, $where);
+
+        
+
+        $newArray = array(
+            'discount' => $arrRets
+        );
+        $arrProduct = array_merge($arrProduct, $newArray);
+
+    }
+
+
+
     /**
      * 商品情報の配列に税込金額を設定する
      *
@@ -656,7 +698,6 @@ __EOS__;
                 dtb_products_class.sale_limit,
                 dtb_products_class.price01,
                 dtb_products_class.price02,
-                dtb_products_class.discount,
                 dtb_products_class.deliv_fee,
                 dtb_products_class.point_rate,
                 dtb_products_class.down_filename,
