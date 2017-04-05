@@ -7,6 +7,11 @@ INSERT INTO dtb_bloc (device_type_id, bloc_id, bloc_name, tpl_path, filename, cr
 INSERT INTO dtb_bloc (device_type_id, bloc_id, bloc_name, tpl_path, filename, create_date, update_date, php_path, deletable_flg) VALUES (10, 7, 'おすすめ商品', 'recommend.tpl', 'recommend', CURRENT_TIMESTAMP, CURRENT_TIMESTAMP, 'frontparts/bloc/recommend.php', 0);
 INSERT INTO dtb_bloc (device_type_id, bloc_id, bloc_name, tpl_path, filename, create_date, update_date, php_path, deletable_flg) VALUES (10, 8, 'カレンダー', 'calendar.tpl', 'calendar', CURRENT_TIMESTAMP, CURRENT_TIMESTAMP, 'frontparts/bloc/calendar.php', 0);
 INSERT INTO dtb_bloc (device_type_id, bloc_id, bloc_name, tpl_path, filename, create_date, update_date, php_path, deletable_flg) VALUES (10, 9, '【ヘッダー】ログイン', 'login_header.tpl', 'login_header', CURRENT_TIMESTAMP, CURRENT_TIMESTAMP, 'frontparts/bloc/login_header.php', 0);
+
+
+INSERT INTO dtb_bloc (device_type_id, bloc_id, bloc_name, tpl_path, filename, create_date, update_date, php_path, deletable_flg) VALUES (10, 10, 'サンプルブロック', 'sample_bloc.tpl', 'sample_bloc', CURRENT_TIMESTAMP, CURRENT_TIMESTAMP, 'frontparts/bloc/sample_bloc.php', 0);
+
+
 INSERT INTO dtb_bloc (device_type_id, bloc_id, bloc_name, tpl_path, filename, create_date, update_date, php_path, deletable_flg) VALUES (1, 1, 'サイトロゴ', 'site_logo.tpl', 'site_logo', CURRENT_TIMESTAMP, CURRENT_TIMESTAMP, NULL, 0);
 INSERT INTO dtb_bloc (device_type_id, bloc_id, bloc_name, tpl_path, filename, create_date, update_date, php_path, deletable_flg) VALUES (1, 2, '新着情報', 'news.tpl', 'news', CURRENT_TIMESTAMP, CURRENT_TIMESTAMP, 'frontparts/bloc/news.php', 0);
 INSERT INTO dtb_bloc (device_type_id, bloc_id, bloc_name, tpl_path, filename, create_date, update_date, php_path, deletable_flg) VALUES (1, 3, 'おすすめ商品', 'recommend.tpl', 'recommend', CURRENT_TIMESTAMP, CURRENT_TIMESTAMP, 'frontparts/bloc/recommend.php', 0);
@@ -112,6 +117,10 @@ INSERT INTO dtb_blocposition (device_type_id, page_id, target_id, bloc_id, bloc_
 INSERT INTO dtb_blocposition (device_type_id, page_id, target_id, bloc_id, bloc_row, anywhere) VALUES (10, 28, 1, 1, 2, 0);
 INSERT INTO dtb_blocposition (device_type_id, page_id, target_id, bloc_id, bloc_row, anywhere) VALUES (10, 28, 1, 2, 3, 0);
 INSERT INTO dtb_blocposition (device_type_id, page_id, target_id, bloc_id, bloc_row, anywhere) VALUES (10, 28, 1, 3, 1, 0);
+
+INSERT INTO dtb_blocposition (device_type_id, page_id, target_id, bloc_id, bloc_row, anywhere) VALUES (10, 29, 1, 10, 1, 0);
+
+
 INSERT INTO dtb_blocposition (device_type_id, page_id, target_id, bloc_id, bloc_row, anywhere) VALUES (1, 1, 10, 1, 1, 0);
 INSERT INTO dtb_blocposition (device_type_id, page_id, target_id, bloc_id, bloc_row, anywhere) VALUES (1, 1, 2, 2, 1, 0);
 INSERT INTO dtb_blocposition (device_type_id, page_id, target_id, bloc_id, bloc_row, anywhere) VALUES (1, 1, 2, 3, 2, 0);
@@ -620,6 +629,10 @@ INSERT INTO dtb_pagelayout (device_type_id, page_id, page_name, url, filename, h
 INSERT INTO dtb_pagelayout (device_type_id, page_id, page_name, url, filename, header_chk, footer_chk, edit_flg, author, description, keyword, update_url, create_date, update_date, meta_robots) VALUES (10, 26, '商品購入/ご入力内容のご確認', 'shopping/confirm.php', 'shopping/confirm', 1, 1, 2, NULL, NULL, NULL, NULL, CURRENT_TIMESTAMP, CURRENT_TIMESTAMP, 'noindex');
 INSERT INTO dtb_pagelayout (device_type_id, page_id, page_name, url, filename, header_chk, footer_chk, edit_flg, author, description, keyword, update_url, create_date, update_date, meta_robots) VALUES (10, 27, '商品購入/ご注文完了', 'shopping/complete.php', 'shopping/complete', 1, 1, 2, NULL, NULL, NULL, NULL, CURRENT_TIMESTAMP, CURRENT_TIMESTAMP, 'noindex');
 INSERT INTO dtb_pagelayout (device_type_id, page_id, page_name, url, filename, header_chk, footer_chk, edit_flg, author, description, keyword, update_url, create_date, update_date, meta_robots) VALUES (10, 28, 'プライバシーポリシー', 'guide/privacy.php', 'guide/privacy', 1, 1, 2, NULL, NULL, NULL, NULL, CURRENT_TIMESTAMP, CURRENT_TIMESTAMP, NULL);
+
+INSERT INTO dtb_pagelayout (device_type_id, page_id, page_name, url, filename, header_chk, footer_chk, edit_flg, author, description, keyword, update_url, create_date, update_date, meta_robots) VALUES (10, 29, 'サンプルページ', 'sample/index.php', 'sample/index', 1, 1, 2, NULL, NULL, NULL, NULL, CURRENT_TIMESTAMP, CURRENT_TIMESTAMP, NULL);
+
+
 INSERT INTO dtb_pagelayout (device_type_id, page_id, page_name, url, filename, header_chk, footer_chk, edit_flg, author, description, keyword, update_url, create_date, update_date, meta_robots) VALUES (2, 0, NULL, 'preview', 'preview', 1, 1, 1, NULL, NULL, NULL, NULL, CURRENT_TIMESTAMP, CURRENT_TIMESTAMP, NULL);
 INSERT INTO dtb_pagelayout (device_type_id, page_id, page_name, url, filename, header_chk, footer_chk, edit_flg, author, description, keyword, update_url, create_date, update_date, meta_robots) VALUES (2, 1, 'TOPページ', 'index.php', 'index', 1, 1, 2, NULL, NULL, NULL, NULL, CURRENT_TIMESTAMP, CURRENT_TIMESTAMP, NULL);
 INSERT INTO dtb_pagelayout (device_type_id, page_id, page_name, url, filename, header_chk, footer_chk, edit_flg, author, description, keyword, update_url, create_date, update_date, meta_robots) VALUES (2, 2, '商品一覧ページ', 'products/list.php', 'products/list', 1, 1, 2, NULL, NULL, NULL, NULL, CURRENT_TIMESTAMP, CURRENT_TIMESTAMP, NULL);
@@ -650,6 +663,9 @@ INSERT INTO dtb_pagelayout (device_type_id, page_id, page_name, url, filename, h
 INSERT INTO dtb_pagelayout (device_type_id, page_id, page_name, url, filename, header_chk, footer_chk, edit_flg, author, description, keyword, update_url, create_date, update_date, meta_robots) VALUES (2, 27, '商品購入/ご注文完了', 'shopping/complete.php', 'shopping/complete', 1, 1, 2, NULL, NULL, NULL, NULL, CURRENT_TIMESTAMP, CURRENT_TIMESTAMP, 'noindex');
 INSERT INTO dtb_pagelayout (device_type_id, page_id, page_name, url, filename, header_chk, footer_chk, edit_flg, author, description, keyword, update_url, create_date, update_date, meta_robots) VALUES (2, 28, 'プライバシーポリシー', 'guide/privacy.php', 'guide/privacy', 1, 1, 2, NULL, NULL, NULL, NULL, CURRENT_TIMESTAMP, CURRENT_TIMESTAMP, NULL);
 INSERT INTO dtb_pagelayout (device_type_id, page_id, page_name, url, filename, header_chk, footer_chk, edit_flg, author, description, keyword, update_url, create_date, update_date, meta_robots) VALUES (2, 29, 'パスワードを忘れた方', 'forgot/index.php', 'forgot/index', 1, 1, 2, NULL, NULL, NULL, NULL, CURRENT_TIMESTAMP, CURRENT_TIMESTAMP, NULL);
+
+INSERT INTO dtb_pagelayout (device_type_id, page_id, page_name, url, filename, header_chk, footer_chk, edit_flg, author, description, keyword, update_url, create_date, update_date, meta_robots) VALUES (2, 30, 'サンプルページ', 'sample/index.php', 'sample/index', 1, 1, 2, NULL, NULL, NULL, NULL, CURRENT_TIMESTAMP, CURRENT_TIMESTAMP, NULL);
+
 INSERT INTO dtb_pagelayout (device_type_id, page_id, page_name, url, filename, header_chk, footer_chk, edit_flg, author, description, keyword, update_url, create_date, update_date, meta_robots) VALUES (1, 0, NULL, 'preview', 'preview', 1, 1, 1, NULL, NULL, NULL, NULL, CURRENT_TIMESTAMP, CURRENT_TIMESTAMP, NULL);
 INSERT INTO dtb_pagelayout (device_type_id, page_id, page_name, url, filename, header_chk, footer_chk, edit_flg, author, description, keyword, update_url, create_date, update_date, meta_robots) VALUES (1, 1, 'TOPページ', 'index.php', 'index', 1, 1, 2, NULL, NULL, NULL, NULL, CURRENT_TIMESTAMP, CURRENT_TIMESTAMP, NULL);
 INSERT INTO dtb_pagelayout (device_type_id, page_id, page_name, url, filename, header_chk, footer_chk, edit_flg, author, description, keyword, update_url, create_date, update_date, meta_robots) VALUES (1, 2, '商品一覧ページ', 'products/list.php', 'products/list', 1, 1, 2, NULL, NULL, NULL, NULL, CURRENT_TIMESTAMP, CURRENT_TIMESTAMP, NULL);
@@ -687,6 +703,8 @@ INSERT INTO dtb_pagelayout (device_type_id, page_id, page_name, url, filename, h
 INSERT INTO dtb_pagelayout (device_type_id, page_id, page_name, url, filename, header_chk, footer_chk, edit_flg, author, description, keyword, update_url, create_date, update_date, meta_robots) VALUES (1, 35, 'ご利用ガイド/通信料について', 'guide/charge.php', 'guide/charge', 1, 1, 2, NULL, NULL, NULL, NULL, CURRENT_TIMESTAMP, CURRENT_TIMESTAMP, NULL);
 INSERT INTO dtb_pagelayout (device_type_id, page_id, page_name, url, filename, header_chk, footer_chk, edit_flg, author, description, keyword, update_url, create_date, update_date, meta_robots) VALUES (1, 36, 'ご利用ガイド/ご利用規約', 'guide/kiyaku.php', 'guide/kiyaku', 1, 1, 2, NULL, NULL, NULL, NULL, CURRENT_TIMESTAMP, CURRENT_TIMESTAMP, NULL);
 INSERT INTO dtb_pagelayout (device_type_id, page_id, page_name, url, filename, header_chk, footer_chk, edit_flg, author, description, keyword, update_url, create_date, update_date, meta_robots) VALUES (1, 37, 'ご利用ガイド/運営会社紹介', 'guide/about.php', 'guide/about', 1, 1, 2, NULL, NULL, NULL, NULL, CURRENT_TIMESTAMP, CURRENT_TIMESTAMP, NULL);
+
+INSERT INTO dtb_pagelayout (device_type_id, page_id, page_name, url, filename, header_chk, footer_chk, edit_flg, author, description, keyword, update_url, create_date, update_date, meta_robots) VALUES (1, 38, 'サンプルページ', 'sample/index.php', 'sample/index', 1, 1, 2, NULL, NULL, NULL, NULL, CURRENT_TIMESTAMP, CURRENT_TIMESTAMP, NULL);
 
 INSERT INTO dtb_payment (payment_id, payment_method, charge, rule_max, rank, note, fix, status, del_flg, creator_id, create_date, update_date, payment_image, upper_rule, charge_flg, rule_min, upper_rule_max, module_id, module_path, memo01, memo02, memo03, memo04, memo05, memo06, memo07, memo08, memo09, memo10) VALUES (1, '郵便振替', 0, NULL, 4, NULL, 2, 1, 0, 1, CURRENT_TIMESTAMP, CURRENT_TIMESTAMP, NULL, NULL, 1, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL);
 INSERT INTO dtb_payment (payment_id, payment_method, charge, rule_max, rank, note, fix, status, del_flg, creator_id, create_date, update_date, payment_image, upper_rule, charge_flg, rule_min, upper_rule_max, module_id, module_path, memo01, memo02, memo03, memo04, memo05, memo06, memo07, memo08, memo09, memo10) VALUES (2, '現金書留', 0, NULL, 3, NULL, 2, 1, 0, 1, CURRENT_TIMESTAMP, CURRENT_TIMESTAMP, NULL, NULL, 1, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL);
